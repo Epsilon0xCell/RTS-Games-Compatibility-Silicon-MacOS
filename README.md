@@ -1,5 +1,6 @@
 ![Banner](banner.png)
 
+I keep this repo as my own record of which RTS games work on Apple Silicon Macs and which ones do not. The short notes below are the verdicts I care about most. The PDF in this repo holds the longer analysis of the games that do not work.
 
 Zero-K works with box64 userspace translator on Ubuntu arm64 parallels though without visual effects, Beyond All Reason does not work with box64, it requires cloud gaming. (Are these games worth playing if they are so hard to get installed, are there better alternatives?)
 ```
