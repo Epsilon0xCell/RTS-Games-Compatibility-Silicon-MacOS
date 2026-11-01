@@ -1,6 +1,11 @@
-![Banner](banner.png)
+![Intro scenery](intro-banner.png)
+
 
 # RTS-Games-Compatibility-Silicon-MacOS
+
+![Wordmark banner](banner.png)
+
+![Animated scene](scene.svg)
 
 I keep this repo as my own record of which RTS games work on Apple
 Silicon Macs and which ones do not. The short notes below are the
@@ -13,6 +18,9 @@ Game Porting Toolkit, Parallels and VMware, and cloud gaming.
 The notes below are the author's own record. They were not re-tested on
 a Mac in this pass, and their wording, including game spellings, is
 preserved as written.
+
+
+![Separator](sep-heavy.svg)
 
 ## Spring engine titles
 
@@ -59,3 +67,5 @@ Reference used in the notes above:
 ```
 https://www.applegamingwiki.com/wiki/Home
 ```
+
+> **Keeper slip:** entries were preserved as written and not retested in this pass. The author also asks, in the Spring section, whether the spring.exe titles justify their install effort.
