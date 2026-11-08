@@ -1,9 +1,11 @@
-![Intro scenery](intro-banner.png)
+![Intro: a war room map table from above, a hand setting a marker at the edge of the red crossed corner of a khaki campaign map where a green route arrives, brass dividers lying on the map](intro-banner.png)
 
 
 # RTS-Games-Compatibility-Silicon-MacOS
 
-![Wordmark banner](banner.png)
+<p align="center"><img src="logo.png" alt="RTS-Games-Compatibility-Silicon-MacOS logo: a folded khaki campaign map seen from above, a brass divider resting across it and one large green map pin standing at its centre" width="200"></p>
+
+![Banner: a war room map table covered by a khaki campaign map with small unit markers, most routes drawn in green while a cluster at the top right is crossed out in red and blocked by red barrier pieces, brass instruments along the table edges](banner.png)
 
 ![Animated scene](scene.svg)
 

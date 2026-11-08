@@ -3,44 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTS-Games-Compatibility-Silicon-MacOS: The Broth Ledger</title>
-<meta name="description" content="A personal record of which real time strategy titles run on Apple Silicon Macs and which refuse, with a 21 page PDF holding the detailed cases for titles that fail.">
+<title>RTS Games on Apple Silicon: The Map Table</title>
+<meta name="description" content="A personal record of which RTS games run on Apple Silicon Macs, plotted route by route: native ports, Parallels, CrossOver, box64, cloud gaming, and Xbox.">
 <style>
-@font-face{font-family:'Anek Gujarati';src:url('fonts/AnekGujarati.ttf') format('truetype');}
-@font-face{font-family:'Barlow';src:url('fonts/Barlow-Regular.ttf') format('truetype');}
-:root{--soy:#2c2018;--rice:#f6eed8;--bamboo:#6a9454;--red:#bc2c20}
-*{box-sizing:border-box} body{margin:0;background:var(--soy);color:var(--soy);font-family:'Barlow',sans-serif;line-height:1.6}
-h1,h2,h3{font-family:'Anek Gujarati',sans-serif}
-.hero{padding:2rem 6vw 1rem;max-width:1100px;margin:0 auto;color:var(--rice)}.hero img.banner{width:100%;height:auto}
-.logo{width:92px;height:92px;background:var(--rice);border-radius:8px}
-main{padding:0 6vw 3rem;max-width:1100px;margin:0 auto}
-.leaf{background:var(--rice);padding:1.1rem 1.4rem 1.1rem 2.4rem;margin:1.2rem 0;position:relative;background-image:repeating-linear-gradient(transparent 0 27px,rgba(106,148,84,.35) 27px 28px)}
-.leaf:before{content:'';position:absolute;left:26px;top:0;bottom:0;width:2px;background:var(--red)}
-.leaf.refusal{box-shadow:inset 12px 0 0 rgba(188,44,32,.35)}
-.tick{color:var(--bamboo);font-weight:bold}
-.btn{display:inline-block;background:var(--soy);color:var(--rice);font-family:'Anek Gujarati',sans-serif;text-decoration:none;padding:.55rem 1.4rem;border-radius:50%/60%;border:2px solid var(--bamboo);margin:.3rem .3rem .3rem 0}
-.btn:hover{transform:rotate(-1.2deg)}.btn:active{transform:translateY(3px)}.btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-a{color:#7a2c20} .ticklink:before{content:'✓ ';color:var(--bamboo)}
-.edge{height:16px;background:#4a3420;margin:2rem 0;position:relative;text-align:center;color:var(--rice)}
-footer{padding:2rem 6vw;color:var(--rice)}
-.hero a{color:var(--rice)}
+@font-face{font-family:'Big Shoulders Display';src:url('fonts/big-shoulders-display-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Big Shoulders Display';src:url('fonts/big-shoulders-display-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/barlow-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/barlow-600.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/barlow-700.woff2') format('woff2');font-weight:700;font-display:swap}
+:root{--khaki:#c9b98a;--khakideep:#a8935c;--paper:#e9dfc2;--ink:#26221a;--red:#a8231c;--green:#3e6b2f;--brass:#8a6d2f;--mut:#5c543f}
+*{box-sizing:border-box} body{margin:0;background:var(--khaki);color:var(--ink);font-family:'Barlow',sans-serif;line-height:1.6}
+h1,h2{font-family:'Big Shoulders Display',sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.hero{padding:2.4rem 6vw 1.2rem;max-width:1060px;margin:0 auto}
+.hero .logo{width:96px;height:96px;border:3px solid var(--ink)}
+.hero h1{font-weight:900;font-size:2.4rem;margin:.6rem 0 .3rem}
+.hero img.banner{width:100%;height:auto;border:3px solid var(--ink);display:block;margin-top:1.2rem}
+.hero img.intro{width:100%;height:auto;border:3px solid var(--ink);display:block;margin-top:1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);font-family:'Big Shoulders Display',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:.55rem 1.1rem;border:2px solid var(--ink);margin:.3rem .3rem .3rem 0}
+.btn:hover{background:var(--red);border-color:var(--red)}
+.btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+a{color:#7c1d16}
+main{padding:.4rem 6vw 2.4rem;max-width:1060px;margin:0 auto}
+.panel{background:var(--paper);border:2px solid var(--ink);padding:1.1rem 1.4rem;margin:1.3rem 0;position:relative}
+.panel h2{margin:.1rem 0 .4rem;font-size:1.5rem}
+.pin{position:absolute;right:16px;top:14px;width:18px;height:18px;border-radius:50%;border:2px solid var(--ink)}
+.pin.g{background:var(--green)} .pin.r{background:var(--red)} .pin.b{background:var(--brass)}
+.verdict{font-family:'Big Shoulders Display',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.verdict.g{color:var(--green)} .verdict.r{color:var(--red)}
+footer{padding:.4rem 6vw 2.6rem;color:var(--mut);max-width:1060px;margin:0 auto}
 </style>
 </head>
 <body>
 <header class="hero">
-<img class="logo" src="assets/logo.png" alt="Broth ladle with a red tipped hook">
-<img class="banner" src="assets/banner.png" alt="Ramen counter at late service with the ledger open">
-<h1>RTS-Games-Compatibility-Silicon-MacOS</h1>
-<p>This is a personal record of which real time strategy titles run on Apple Silicon Macs and which refuse, with short verdict notes up front and a longer 21 page PDF, RTS Games macOS Incompatibility Analysis, holding the detailed cases for titles that fail.</p>
-<p><a class="btn" href="https://github.com/Epsilon0xCell/RTS-Games-Compatibility-Silicon-MacOS">Open the repo</a> <a class="btn" href="#pdf">Get the PDF</a></p>
+<img class="logo" src="assets/logo.png" alt="Folded khaki campaign map with a brass divider and one large green map pin at its centre">
+<h1>RTS Games on Apple Silicon</h1>
+<p>A personal record of which real time strategy games run on Apple Silicon Macs, plotted route by route: native Mac ports, Parallels, CrossOver, box64, cloud gaming, and the Xbox detour. The entries are the author's own notes, preserved as written.</p>
+<p><a class="btn" href="https://github.com/Epsilon0xCell/RTS-Games-Compatibility-Silicon-MacOS">Open the repo</a> <a class="btn" href="#pdf">The written record</a></p>
+<img class="banner" src="assets/banner.png" alt="A war room map table: green routes across a khaki map, one corner crossed out in red, brass instruments along the edges">
+<img class="intro" src="assets/intro-banner.png" alt="A hand setting a marker at the edge of the red crossed corner where a green route arrives">
 </header>
 <main>
-<section class="leaf"><h2>Native successes</h2><p><span class="tick">✓</span> OpenRA: works great through a native Mac port.</p><p><span class="tick">✓</span> Warzone 2100: works great through a native Mac port. These are the house staples that need no workaround.</p></section>
-<div class="edge"> ladle at rest </div>
-<section class="leaf"><h2>Translation and virtual routes</h2><p><span class="tick">✓</span> Red Alert 3: working great on Parallels, and possibly on CrossOver.</p><p><span class="tick">✓</span> Tempest Rising: working fantastically on macOS.</p><p>Spring engine findings: Zero-K is playable through box64 on Ubuntu arm64 under Parallels, though without visual effects. Beyond All Reason does not work through box64 and requires cloud gaming.</p><p>Keeper slip, the author's own aside: whether the spring.exe titles justify their install effort is questioned in the record itself.</p></section>
-<section class="leaf refusal"><h2>Refusals and detours</h2><p>Company of Heroes 3: refuses every route, emulation, virtualization, and translation alike. Its <a class="ticklink" href="https://www.applegamingwiki.com/wiki/Company_of_Heroes_3">AppleGamingWiki page</a> is cited in the record.</p><p>Console detours, all three flagged as Game Pass titles: Halo Wars Definitive Edition and Halo Wars 2 are preferred on Xbox, and Age of Empires IV is on Xbox. The general advice in the record: anti cheat titles are better played on console, while Mac suits RTS play.</p></section>
-<section class="leaf" id="pdf"><h2>Keeper notes</h2><p>Hardware outweighs an optimized x86_64 Linux install in the author's judgment. The home reference is <a class="ticklink" href="https://www.applegamingwiki.com/wiki/Home">AppleGamingWiki</a>.</p><p><a class="btn" href="https://github.com/Epsilon0xCell/RTS-Games-Compatibility-Silicon-MacOS/blob/main/RTS%20Games%20macOS%20Incompatibility%20Analysis_.pdf">Download the 21 page PDF</a></p><p>Honesty note from the record: entries were preserved as written and not retested in this pass.</p></section>
+<section class="panel" id="pdf"><span class="pin b"></span><h2>The written record</h2><p>The repo's main document is the PDF the README and this page both point to, described in the repo's own documents as a 21-page analysis of RTS games that do not run on macOS. It is linked below exactly as the repo links it.</p><p><a class="btn" href="https://github.com/Epsilon0xCell/RTS-Games-Compatibility-Silicon-MacOS/blob/main/RTS%20Games%20macOS%20Incompatibility%20Analysis_.pdf">Download the PDF</a></p></section>
+<section class="panel"><span class="pin g"></span><h2>The native column</h2><p><span class="verdict g">Works great:</span> OpenRA and Warzone 2100 both run as native Mac ports, no translation layer involved. Tempest Rising is recorded as fantastic on macOS.</p></section>
+<section class="panel"><span class="pin g"></span><h2>The Parallels column</h2><p><span class="verdict g">Plays great:</span> Red Alert 3 inside Parallels, and possibly great on CrossOver as well. Zero-K is playable through box64 on Ubuntu arm64 under Parallels, with the rider that it runs without visual effects.</p></section>
+<section class="panel"><span class="pin r"></span><h2>The blocked corner</h2><p><span class="verdict r">Does not work:</span> Beyond All Reason does not work through box64 and requires cloud gaming instead. Company of Heroes 3 refuses every route tried; its <a href="https://www.applegamingwiki.com/wiki/Company_of_Heroes_3">AppleGamingWiki page</a> is the linked reference. The record's wider rule: RTS games that do not work on macOS and are not on Xbox Game Pass are a lost cause.</p></section>
+<section class="panel"><span class="pin b"></span><h2>The console detour</h2><p>Halo Wars Definitive Edition is preferred on Xbox, Halo Wars 2 runs on Xbox, and Age of Empires IV is played on Xbox; all three are on Game Pass. The author's standing advice in the record: for modern games with kernel-level anticheat, play on console and stay sane.</p></section>
+<section class="panel"><span class="pin b"></span><h2>Field notes</h2><p>Two lines the record keeps coming back to: hardware outweighs the operating system underneath, mattering more than an optimized x86_64 Linux such as CachyOS or Garuda Linux; and Mac gaming gets better every day. The <a href="https://www.applegamingwiki.com/wiki/Home">AppleGamingWiki</a> stands as the reference shelf for routes not yet plotted. Xbox Game Pass Ultimate is recorded as the best deal in gaming.</p></section>
 </main>
-<footer><p>The ladle rests on the ledger at close of service: the record is complete for today and left where tomorrow's testing will find it.</p></footer>
+<footer><p>Honesty note, carried over from the record itself: these entries are one player's findings, written down as they were found and preserved as written; they were not retested when this page was rebuilt.</p></footer>
 </body>
 </html>
